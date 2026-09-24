@@ -1,0 +1,34 @@
+# Local-only project docs. Never pushed, never deployed (GitHub Pages publishes the repo root).
+credentials.md
+design-direction.md
+borrowed-patterns.md
+HANDOFF.md
+README.md
+CHANGELOG.md
+seo-audit.md
+deploy.py
+_manifest.json
+_build/
+qa/
+__f/
+
+# Secrets, always.
+.env
+.env.*
+*.pem
+*.key
+*.p12
+github-pat.txt
+
+# Scratch.
+_RecycleBin/
+_research/
+swipes/
+runs/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+
+# Stray browser downloads
+dg-ig-*.jpg
