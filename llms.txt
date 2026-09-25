@@ -10,24 +10,24 @@
 - Hours: Mon to Fri 8 AM to 6 PM, Sat 6 AM to 6 PM, Sun 10 AM to 5 PM
 
 ## Services
-- Interior painting: https://www.dgdesigncontracting.com/services/interior-painting/
-- Exterior painting: https://www.dgdesigncontracting.com/services/exterior-painting/
-- Limewash and mineral paint: https://www.dgdesigncontracting.com/services/limewash/
-- Accent walls: https://www.dgdesigncontracting.com/services/accent-walls/
-- Pressure washing: https://www.dgdesigncontracting.com/services/pressure-washing/
-- Doors and wood staining: https://www.dgdesigncontracting.com/services/doors-wood-staining/
-- Kitchens and baths: https://www.dgdesigncontracting.com/services/kitchens-bathrooms/
+- Interior painting: https://crossfiber.github.io/dgdesigncontracting/services/interior-painting/
+- Exterior painting: https://crossfiber.github.io/dgdesigncontracting/services/exterior-painting/
+- Limewash and mineral paint: https://crossfiber.github.io/dgdesigncontracting/services/limewash/
+- Accent walls: https://crossfiber.github.io/dgdesigncontracting/services/accent-walls/
+- Pressure washing: https://crossfiber.github.io/dgdesigncontracting/services/pressure-washing/
+- Doors and wood staining: https://crossfiber.github.io/dgdesigncontracting/services/doors-wood-staining/
+- Kitchens and baths: https://crossfiber.github.io/dgdesigncontracting/services/kitchens-bathrooms/
 - Also on request: epoxy coatings, stucco crack repair, cabinet painting, commercial work
 
 ## Service areas
-- Lake Mary (home base): https://www.dgdesigncontracting.com/
-- Heathrow (Seminole County): https://www.dgdesigncontracting.com/heathrow/
-- Sanford (Seminole County): https://www.dgdesigncontracting.com/sanford/
-- Longwood (Seminole County): https://www.dgdesigncontracting.com/longwood/
-- Winter Park (Orange County): https://www.dgdesigncontracting.com/winter-park/
+- Lake Mary (home base): https://crossfiber.github.io/dgdesigncontracting/
+- Heathrow (Seminole County): https://crossfiber.github.io/dgdesigncontracting/heathrow/
+- Sanford (Seminole County): https://crossfiber.github.io/dgdesigncontracting/sanford/
+- Longwood (Seminole County): https://crossfiber.github.io/dgdesigncontracting/longwood/
+- Winter Park (Orange County): https://crossfiber.github.io/dgdesigncontracting/winter-park/
 
 ## More
-- Reviews: https://www.dgdesigncontracting.com/reviews/
-- Work: https://www.dgdesigncontracting.com/work/
-- About: https://www.dgdesigncontracting.com/about/
-- Contact: https://www.dgdesigncontracting.com/contact/
+- Reviews: https://crossfiber.github.io/dgdesigncontracting/reviews/
+- Work: https://crossfiber.github.io/dgdesigncontracting/work/
+- About: https://crossfiber.github.io/dgdesigncontracting/about/
+- Contact: https://crossfiber.github.io/dgdesigncontracting/contact/
