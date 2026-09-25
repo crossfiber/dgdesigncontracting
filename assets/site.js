@@ -120,16 +120,25 @@ if ('scrollRestoration' in history) { history.scrollRestoration = 'auto'; }
     document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && lb.classList.contains('open')) closeLb(); });
   }
 
-  /* ---- sideways rails: arrow buttons step one card ---- */
-  document.querySelectorAll('[data-rail-prev],[data-rail-next]').forEach(function(btn){
-    var rail = document.getElementById(btn.getAttribute('data-rail-prev') || btn.getAttribute('data-rail-next'));
-    if (!rail) return;
-    var dir = btn.hasAttribute('data-rail-prev') ? -1 : 1;
-    btn.addEventListener('click', function(){
-      var c = rail.firstElementChild;
-      var step = c ? c.getBoundingClientRect().width + 16 : 320;
-      rail.scrollBy({left: dir * step, behavior:'smooth'});
-    });
+  /* ---- sideways rails: arrows step one card, disable at the ends, count on phones ---- */
+  document.querySelectorAll('.rail').forEach(function(rail){
+    if (!rail.id) return;
+    var prev = document.querySelectorAll('[data-rail-prev="' + rail.id + '"]');
+    var next = document.querySelectorAll('[data-rail-next="' + rail.id + '"]');
+    var count = document.querySelector('[data-count="' + rail.id + '"]');
+    var cards = [].slice.call(rail.children);
+    var step = function(){ var c = rail.firstElementChild; return c ? c.getBoundingClientRect().width + parseFloat(getComputedStyle(rail).columnGap || 20) : 320; };
+    var update = function(){
+      var max = rail.scrollWidth - rail.clientWidth - 2;
+      prev.forEach(function(b){ b.disabled = rail.scrollLeft <= 2; });
+      next.forEach(function(b){ b.disabled = rail.scrollLeft >= max; });
+      if (count) { var i = Math.round(rail.scrollLeft / step()); count.textContent = Math.min(i + 1, cards.length) + ' / ' + cards.length; }
+    };
+    prev.forEach(function(b){ b.addEventListener('click', function(){ rail.scrollBy({left: -step(), behavior:'smooth'}); }); });
+    next.forEach(function(b){ b.addEventListener('click', function(){ rail.scrollBy({left: step(), behavior:'smooth'}); }); });
+    var t; rail.addEventListener('scroll', function(){ clearTimeout(t); t = setTimeout(update, 60); }, {passive:true});
+    window.addEventListener('resize', update);
+    update();
   });
 
   /* ---- open-now line + today's row in every hours table (Lake Mary time) ---- */
