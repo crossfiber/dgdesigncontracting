@@ -40,11 +40,14 @@ if ('scrollRestoration' in history) { history.scrollRestoration = 'auto'; }
   var drawer = document.getElementById('navDrawer');
   var overlay = document.getElementById('navOverlay');
   var drawerClose = document.getElementById('drawerClose');
+  var shell = document.querySelector('.drawer-shell');
   function openDrawer(){
     drawer.classList.add('open'); overlay.classList.add('open');
     document.body.classList.add('drawer-open');
     drawer.setAttribute('aria-hidden','false'); hamburger.setAttribute('aria-expanded','true');
-    drawerClose.focus();
+    /* focus without scrolling: focusing inside the clipped wrapper mid-slide scrolled it sideways on iOS */
+    shell.scrollLeft = 0;
+    setTimeout(function(){ try { drawerClose.focus({preventScroll:true}); } catch (e) { drawerClose.focus(); } shell.scrollLeft = 0; }, 320);
   }
   function closeDrawer(){
     drawer.classList.remove('open'); overlay.classList.remove('open');
@@ -160,7 +163,7 @@ if ('scrollRestoration' in history) { history.scrollRestoration = 'auto'; }
     var dots = [].slice.call(card.querySelectorAll('.qq-dots i'));
     var stepNo = card.querySelector('.qq-stepno');
     var picked = qf.querySelector('.qq-picked');
-    var cur = 0;
+    var cur = Math.max(0, steps.findIndex(function(st){ return st.classList.contains('on'); }));
     var el = function(n){ return qf.querySelector('[name="' + n + '"]'); };
     var escH = function(s){ return String(s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); };
     var paint = function(){
